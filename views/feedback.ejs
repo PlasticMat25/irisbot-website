@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/styles/reset.css">
+    <link rel="stylesheet" type="text/css" href="/styles/header.css">
+    <link rel="stylesheet" type="text/css" href="/styles/feedback.css">
+    <title>Document</title>
+</head>
+<body class="light">
+    <header>
+        <h1 class="logo"><span>Iris</span>Bot</h1>
+        <div class="right-menu">
+            <ul class="list">
+                <li>Home</li>
+                <li>Commands</li>
+                <li>Feedback</li>
+            </ul>
+
+            <div id="toggleButton" class="toggleButton">
+                <div class="indicator active-indicator"></div>
+                <span>Lights!</span>
+            </div>
+        </div>
+    </header>
+    
+    <main>
+        <h1>Feedback</h1>
+        <% if(locals.message){ %>
+            <div class="submit-message">
+                <h4><%= message %></h4>
+            </div>
+        <% } %>
+        <form action="/" method="POST">
+            <label for="feedback">Description</label>
+            <input 
+                type="text" 
+                id="feedback" 
+                name="feedback" 
+                placeholder="πχ: Είναι το καλύτερο discord bot που έχω δει![max.200 λέξεις]" required></input>
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+
+    <script src="/scripts/toggleTheme.js"></script>
+</body>
+</html>

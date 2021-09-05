@@ -1,0 +1,76 @@
+header { 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--foreground-color);
+    box-shadow: 0 0 5px 1px #2229;
+    padding: 0 5vw;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    min-height: 3em;
+}
+
+.toggleButton {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    margin-left: 2em;
+}
+
+.indicator {
+    background-color: var(--background-color);
+    box-shadow: 0 0 3px 0 #2228;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 3px solid var(--foreground-color);
+    transition: box-shadow 0.2s, background-color 0.2s ease-in;
+}
+
+.toggleButton span {
+    letter-spacing: 0.05em;
+    font-size: 55%;
+    color: #999;
+    width: fit-content;
+}
+
+.active-indicator {
+    background-color: var(--ui-color);
+    box-shadow: 0 0 5px 1px #4444ccdd,
+                0 0 3px 1px #6565d1dd,
+                0 0 2px 1px #cccccccc;
+}
+
+.logo{
+    color: var(--text-color);
+    font-size: 150%;
+    cursor: pointer;
+}
+
+.logo span{
+    color: var(--ui-color);
+    font-size: 125%;
+    letter-spacing: 0.005em;
+}
+
+.right-menu {
+    display: flex;
+    align-items: center;
+}
+
+.right-menu .list {
+    display: flex;
+}
+
+.right-menu .list li{
+    color: var(--text-color);
+    padding: 0 1em;
+    transition: transform 0.1s;
+}
+.right-menu .list li:hover{
+    transform: scale(1.1);
+    color: var(--hover-text);
+}
